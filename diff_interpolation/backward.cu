@@ -1,5 +1,7 @@
 #include <torch/extension.h>
 
+#include "backward.h"
+
 template <typename scalar_t>
 __global__ void trilinear_backward_kernel(
     const torch::PackedTensorAccessor<scalar_t, 2, torch::RestrictPtrTraits,

@@ -1,4 +1,5 @@
 #include <torch/extension.h>
+#include "forward.h"
 
 template <typename scalar_t>
 __global__ void trilinear_forward_kernel(
