@@ -1,6 +1,7 @@
 #include <torch/extension.h>
 
-#include "diff_interpolation/interpolation_kernel.h"
+#include "diff_interpolation/backward.h"
+#include "diff_interpolation/forward.h"
 
 torch::Tensor trilinear_interpolation_forward(const torch::Tensor feats,
                                               const torch::Tensor points) {
