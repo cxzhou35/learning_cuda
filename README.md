@@ -4,7 +4,7 @@ Introduction to cpp/cuda extension for PyTorch and building first cpp bridge.
 
 **PyTorch -> Cpp -> CUDA**
 
-In this tutorial, we will implement a PyTorch CUDA extension called **diff_trilinear_interpolation** which is a differentiable trilinear interpolation. The forward and backward functions are implemented in CUDA and the C++ bridge is used to connect the PyTorch and CUDA.
+In this tutorial, we will implement a PyTorch CUDA extension called **diff_trilinear_interpolation**. The forward and backward modules are implemented in CUDA and the C++ bridge is used to connect the PyTorch and CUDA.
 
 [Tutorial Video by YouTuber AI葵](https://www.youtube.com/watch?v=l_Rpk6CRJYI) | [Github Repo](https://github.com/kwea123/pytorch-cppcuda-tutorial)
 
@@ -41,4 +41,16 @@ cd learning_cuda
 pip install .
 
 python test.py
+```
+
+results:
+
+```
+CUDA forward time: 0.002805948257446289 s
+PyTorch forward time: 0.004231929779052734 s
+Forward all close True
+
+CUDA backward time 0.005219936370849609 s
+PyTorch backward time 0.03641915321350098 s
+Backward all close True
 ```
