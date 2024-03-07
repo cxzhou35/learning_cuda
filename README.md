@@ -13,6 +13,7 @@ In this tutorial, we will implement a PyTorch CUDA extension called **diff_trili
 - CUDA explanation: https://nyu-cds.github.io/python-gpu/02-cuda/
 - C++ API: https://pytorch.org/cppdocs/
 - Kernel launching: https://pytorch.org/tutorials/advanced/cpp_extension.html
+- PyTorch Autograd Explained - In-depth Tutorial: https://www.youtube.com/watch?v=MswxJw-8PvE
 
 ## File Structures
 
