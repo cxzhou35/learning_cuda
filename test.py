@@ -59,13 +59,13 @@ def main():
     loss_cuda = output_cuda.sum()
     loss_cuda.backward()
     torch.cuda.synchronize()
-    print('CUDA backward time', time.time()-t, 's')
+    print('CUDA backward time:', time.time()-t, 's')
 
     t = time.time()
     loss_py = output_py.sum()
     loss_py.backward()
     torch.cuda.synchronize()
-    print('PyTorch backward time', time.time()-t, 's')
+    print('PyTorch backward time:', time.time()-t, 's')
 
     print('Backward all close', torch.allclose(feats.grad, feats2.grad), '\n')
 
