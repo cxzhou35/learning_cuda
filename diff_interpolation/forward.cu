@@ -3,10 +3,12 @@
 
 template <typename scalar_t>
 __global__ void trilinear_forward_kernel(
+    // __global__ modifier means this is a kernel function
     // kernel function don't return any results
-    // __global__ means this function can be called from host(cpu) but run on
-    // device(gpu)
-    // also have __host__ and __device__
+    // this function can be called from host(cpu) but run on device(gpu)
+    // must set blocks and threads when invoking kernel function like this:
+    // kernel_function<<<blocks, threads>>>(params)
+    // modifier also have __host__ and __device__
     const torch::PackedTensorAccessor<scalar_t, 3, torch::RestrictPtrTraits,
                                       size_t>
         feats,
