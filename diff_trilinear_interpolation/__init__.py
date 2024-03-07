@@ -2,7 +2,7 @@ import torch
 # must import after torch
 from . import _C
 
-# using PyTorch api to wrap the CUDA function
+# using PyTorch API to wrap the CUDA function
 class Trilinear_interpolation_cuda(torch.autograd.Function):
     @staticmethod
     def forward(ctx, feats, points):
